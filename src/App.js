@@ -24,7 +24,7 @@ export default function ComingSoon() {
       >
         COMING&nbsp;&nbsp;SOON
       </motion.h1>
-      <p className="coming-soon-text">This site will be up soon</p>
+      <p className="coming-soon-text">This site will be up soon...</p>
     </div>
   );
 }
