@@ -30,6 +30,8 @@ export default function ComingSoon() {
 				<p className='socials-text'>
 					Follow our socials and connect with us:
 				</p>
+			</div>
+			<div className='socials-wrapper'>
 				<a
 					href='https://www.instagram.com/playnow.ae/'
 					target='_blank'
@@ -48,7 +50,7 @@ export default function ComingSoon() {
 				>
 					<img
 						src='/images/facebook.png'
-						alt='LinkedIn'
+						alt='Facebook'
 						className='social-icon'
 					/>
 				</a>

@@ -1,90 +1,96 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
 
 .coming-soon-container {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-image: url("../public/images/bg.svg");
-  background-size: cover;
-  background-position: center;
-  font-family: "Poppins", sans-serif;
-  text-align: center;
-  color: white;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-image: url('../public/images/bg.svg');
+	background-size: cover;
+	background-position: center;
+	font-family: 'Poppins', sans-serif;
+	text-align: center;
+	color: white;
 }
 
 .logo-wrapper {
-  position: relative; 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .main-logo {
-  max-width: 480px;
-  height: auto;
-  margin: 0;
+	max-width: 480px;
+	height: auto;
+	margin: 0;
 }
 
 .coming-soon-logo {
-  .coming-soon-logo {
-    mix-blend-mode: multiply;
-  }  
-  max-width: 260px; 
-  height: auto;
-  filter: brightness(0) invert(1);
-  position: absolute;
-  right: -225px; 
-  top: 230px;
-  transform: rotate(350deg);
+	.coming-soon-logo {
+		mix-blend-mode: multiply;
+	}
+	max-width: 260px;
+	height: auto;
+	filter: brightness(0) invert(1);
+	position: absolute;
+	right: -225px;
+	top: 230px;
+	transform: rotate(350deg);
 }
 
 .sports-buddy-text {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-top: 20px;
-  margin-bottom: 30px;
+	font-size: 2rem;
+	font-weight: bold;
+	margin-top: 20px;
+	margin-bottom: 30px;
 }
 
-
 .partner-text {
-  font-family: "Times New Roman", serif;
-  font-size: 2.5rem;
-  margin: 5px 0; 
-  letter-spacing: 4px;
-  font-weight: bold;
+	font-family: 'Times New Roman', serif;
+	font-size: 2.5rem;
+	margin: 5px 0;
+	letter-spacing: 4px;
+	font-weight: bold;
 }
 
 .email-link {
-  color: white; 
-  text-decoration: none;
-  font-weight: bold;
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
 }
 
 .email-link:hover {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
 .text-container {
-  font-family: "Times New Roman", serif;
-  margin: 5px 0;
+	font-family: 'Times New Roman', serif;
+	margin: 5px 0;
 }
 
 .socials-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin: 5px 0; 
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	margin: 0 0 0 0;
 }
 
 .socials-text {
-  font-family: "Times New Roman", serif;
-  font-size: 1.8rem;
+	font-family: 'Times New Roman', serif;
+	font-size: 1.8rem;
 }
 
 .social-icon {
-  width: 24px;
-  height: 24px;
+	width: 24px;
+	height: 24px;
+}
+
+.socials-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	margin-top: 0px;
 }
