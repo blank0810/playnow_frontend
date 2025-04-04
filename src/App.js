@@ -1,30 +1,58 @@
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import "./App.css";
+import './App.css';
 
 export default function ComingSoon() {
-  const [glow, setGlow] = useState(0);
+	return (
+		<div className='coming-soon-container'>
+			<div className='logo-wrapper'>
+				<img
+					src='/images/main-logo.png'
+					alt='Main Logo'
+					className='main-logo'
+				/>
+				<img
+					src='/images/coming-soon.png'
+					alt='Coming Soon'
+					className='coming-soon-logo'
+				/>
+			</div>
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setGlow((prev) => (prev + 1) % 100);
-    }, 50);
-    return () => clearInterval(interval);
-  }, []);
+			<p className='sports-buddy-text'>- Your Sports Buddy -</p>
 
-  return (
-    <div className="coming-soon-container">
-      <div className="play-now">
-        Play<span>Now</span>
-      </div>
-      <motion.h1
-        className="coming-soon-title"
-        animate={{ textShadow: `0px 0px ${glow / 5}px white` }}
-        transition={{ duration: 0.1, repeat: Infinity }}
-      >
-        COMING&nbsp;&nbsp;SOON
-      </motion.h1>
-      <p className="coming-soon-text">This site will be up soon...</p>
-    </div>
-  );
+			<p className='partner-text'>
+				Partner with us. Email us at
+				<a href='mailto:hello@playnow.ae' className='email-link'>
+					{' '}
+					hello@playnow.ae
+				</a>
+			</p>
+
+			<div className='socials-container'>
+				<p className='socials-text'>
+					Follow our socials and connect with us:
+				</p>
+				<a
+					href='https://www.instagram.com/playnow.ae/'
+					target='_blank'
+					rel='noopener noreferrer'
+				>
+					<img
+						src='/images/instagram.png'
+						alt='Instagram'
+						className='social-icon'
+					/>
+				</a>
+				<a
+					href='https://www.facebook.com/profile.php?id=61567354175981'
+					target='_blank'
+					rel='noopener noreferrer'
+				>
+					<img
+						src='/images/facebook.png'
+						alt='LinkedIn'
+						className='social-icon'
+					/>
+				</a>
+			</div>
+		</div>
+	);
 }
