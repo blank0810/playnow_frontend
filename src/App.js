@@ -32,7 +32,7 @@ export default function ComingSoon() {
 				/>
 			</div>
 
-			<p className='sports-buddy-text'>- Your Sports Buddys -</p>
+			<p className='sports-buddy-text'>- Your Sports Buddy -</p>
 
 			<p className='partner-text'>
 				Partner with us. Email us at
