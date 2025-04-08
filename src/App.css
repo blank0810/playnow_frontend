@@ -2,17 +2,23 @@
 
 .coming-soon-container {
 	height: 100vh;
+	width: 100vw;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	background-image: url('../public/images/bg.svg');
-	background-size: cover;
-	background-position: center;
+	background-size: cover;           
+	background-position: center;     
+	background-repeat: no-repeat;    
+	background-attachment: fixed;   
+	transition: background-image 1s ease-in-out;
 	font-family: 'Poppins', sans-serif;
 	text-align: center;
 	color: white;
+	position: relative;
+	z-index: 3;
 }
+
 
 .logo-wrapper {
 	position: relative;
