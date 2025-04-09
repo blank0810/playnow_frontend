@@ -7,36 +7,42 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	background-size: cover;           
-	background-position: center;     
-	background-repeat: no-repeat;    
-	background-attachment: fixed;   
-	transition: background-image 1s ease-in-out;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	transition: opacity 1s ease-in-out;
 	font-family: 'Poppins', sans-serif;
 	text-align: center;
 	color: white;
 	position: relative;
+	overflow: hidden;
 	z-index: 3;
+	opacity: 1;
 }
 
+.coming-soon-container.fade-out {
+	opacity: 0;
+}
 
 .logo-wrapper {
 	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-wrap: wrap;
+	gap: 1rem;
+	transition: all 0.3s ease-in-out;
 }
 
 .main-logo {
 	max-width: 480px;
 	height: auto;
-	margin: 0;
+	margin: 0 auto;
+	transition: all 0.3s ease-in-out;
 }
 
 .coming-soon-logo {
-	.coming-soon-logo {
-		mix-blend-mode: multiply;
-	}
+	mix-blend-mode: multiply;
 	max-width: 260px;
 	height: auto;
 	filter: brightness(0) invert(1);
@@ -44,6 +50,7 @@
 	right: -225px;
 	top: 230px;
 	transform: rotate(350deg);
+	transition: all 0.3s ease-in-out;
 }
 
 .sports-buddy-text {
@@ -51,6 +58,7 @@
 	font-weight: bold;
 	margin-top: 20px;
 	margin-bottom: 30px;
+	transition: all 0.3s ease-in-out;
 }
 
 .partner-text {
@@ -59,16 +67,20 @@
 	margin: 5px 0;
 	letter-spacing: 4px;
 	font-weight: bold;
+	padding: 0 1rem;
+	transition: all 0.3s ease-in-out;
 }
 
 .email-link {
 	color: white;
 	text-decoration: none;
 	font-weight: bold;
+	transition: color 0.3s ease-in-out;
 }
 
 .email-link:hover {
 	text-decoration: underline;
+	color: #ccc;
 }
 
 .text-container {
@@ -77,26 +89,82 @@
 }
 
 .socials-container {
+	display: flex;
 	align-items: center;
 	justify-content: center;
 	gap: 10px;
-	margin: 0 0 0 0;
+	margin: 10px 0;
+	padding: 0 1rem;
+	transition: all 0.3s ease-in-out;
 }
 
 .socials-text {
 	font-family: 'Times New Roman', serif;
-	font-size: 1.8rem;
+	font-size: 1.5rem;
+	transition: all 0.3s ease-in-out;
 }
 
 .social-icon {
-	width: 24px;
-	height: 24px;
+	width: 32px;
+	height: 32px;
+	transition: transform 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+	transform: scale(1.1);
 }
 
 .socials-wrapper {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap: 10px;
+	gap: 15px;
 	margin-top: 0px;
+}
+
+/* kani lang ak gi add nan, media queries */
+@media (max-width: 768px), (orientation: landscape) {
+	.partner-text {
+		font-size: 1.5rem;
+		letter-spacing: 2px;
+		text-align: center;
+	}
+
+	.sports-buddy-text {
+		font-size: 1.5rem;
+		text-align: center;
+	}
+
+	.socials-text {
+		font-size: 1.2rem;
+		text-align: center;
+	}
+
+	.socials-wrapper {
+		flex-wrap: wrap;
+		gap: 10px;
+	}
+}
+
+@media (max-width: 480px) {
+	.partner-text {
+		font-size: 1.2rem;
+	}
+
+	.socials-text {
+		font-size: 1rem;
+	}
+
+	.social-icon {
+		width: 24px;
+		height: 24px;
+	}
+
+	.coming-soon-logo {
+		max-width: 150px;
+	}
+
+	.main-logo {
+		max-width: 260px;
+	}
 }
