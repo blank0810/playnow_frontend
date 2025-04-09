@@ -1,0 +1,32 @@
+# Docker related files
+Dockerfile
+.dockerignore
+docker-compose.yml
+docker-compose.*.yml
+
+# Git
+.git
+.gitignore
+
+# Dependencies - IMPORTANT for dev volume mapping
+node_modules
+
+# Next.js build output and cache
+.next
+
+# Local environment variables (important for security!)
+.env
+.env.local
+.env.*.local
+
+# Test files and coverage reports (optional)
+coverage
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE config (optional)
+.vscode
+.idea
