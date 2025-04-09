@@ -10,18 +10,18 @@
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	transition: opacity 1s ease-in-out;
+	transition: opacity 0.4s ease-in-out;
 	font-family: 'Poppins', sans-serif;
 	text-align: center;
 	color: white;
 	position: relative;
 	overflow: hidden;
 	z-index: 3;
-	opacity: 1;
+	opacity: 0
 }
 
-.coming-soon-container.fade-out {
-	opacity: 0;
+.coming-soon-container.fade-in {
+	opacity: 1;
 }
 
 .logo-wrapper {
