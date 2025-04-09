@@ -3,17 +3,31 @@ import './App.css';
 
 export default function ComingSoon() {
 	const [bgIndex, setBgIndex] = useState(2);
+	const [bgLoaded, setBgLoaded] = useState(false); // add lang ko ani nan
 
 	useEffect(() => {
+		// dli madala ug css kani nalang hahahah
+		const preloadImages = (images) => {
+			images.forEach((image) => {
+				const img = new Image();
+				img.src = image;
+				img.onload = () => setBgLoaded(true);
+			});
+		};
+
+		const imageUrls = ['/images/1.svg', '/images/2.svg', '/images/3.svg', '/images/4.svg', '/images/5.svg', '/images/6.svg'];
+		preloadImages(imageUrls);
+
 		const interval = setInterval(() => {
-			setBgIndex(prev => (prev === 6 ? 2 : prev + 1));
-		}, 3000); 
+			setBgIndex((prev) => (prev === 6 ? 2 : prev + 1));
+		}, 2000); 
+		
 		return () => clearInterval(interval);
 	}, []);
 
 	return (
 		<div
-			className='coming-soon-container'
+			className={`coming-soon-container ${bgLoaded ? 'fade-in' : ''}`}
 			style={{
 				backgroundImage: `url(/images/${bgIndex}.svg)`,
 			}}
