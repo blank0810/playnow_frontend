@@ -3,7 +3,7 @@ import BlogItem from "@/components/Merchants/MerchantItem";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "MERCHANT",
+  title: "Merchants",
 
   // other metadata
   description: "This is MERCHANT page"
