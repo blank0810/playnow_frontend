@@ -5,7 +5,24 @@ import Image from "next/image";
 import Link from "next/link";
 
 const MerchantItem = ({ merchant }: { merchant: Business }) => {
-  const { mainImage, title, metadata } = merchant;
+  const { mainImage, title, metadata, _id } = merchant;
+
+  const imageNumber = (_id % 5) + 1; // Generates 1, 2, 3, 4, 5, 1, 2, ...
+  const imageName = `blog-0${imageNumber}.png`; // Assuming .jpg extension
+
+  // Construct the full image URL
+  let fullImageUrl;
+
+  // Check if mainImage already contains a filename
+  if (mainImage.includes(".png") || mainImage.includes(".jpg")) {
+    // If it does, use only the generated imageName
+    fullImageUrl = `/images/merchant/${imageName}`;
+  } else {
+    // If it doesn't, append the generated imageName
+    fullImageUrl = `${mainImage}${imageName}`;
+  }
+
+  console.log(fullImageUrl);
 
   return (
     <>
@@ -28,7 +45,7 @@ const MerchantItem = ({ merchant }: { merchant: Business }) => {
         className="animate_top rounded-lg bg-white p-4 pb-9 shadow-solid-8 dark:bg-blacksection"
       >
         <Link href={`/merchant/`} className="relative block aspect-[368/239]">
-          <Image src={mainImage} alt={title} fill />
+          <Image src={fullImageUrl} alt={title} fill />
         </Link>
 
         <div className="px-4">

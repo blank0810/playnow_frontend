@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  playnow-frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: deps
+    working_dir: /usr/src/app
+    command: npm run dev -- -H 0.0.0.0
+    volumes:
+      - .:/usr/src/app
+      - node_modules_volume:/usr/src/app/node_modules
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+    restart: unless-stopped
+
+volumes:
+  node_modules_volume:
