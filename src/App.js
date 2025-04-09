@@ -7,8 +7,7 @@ export default function ComingSoon() {
 	useEffect(() => {
 		const interval = setInterval(() => {
 			setBgIndex(prev => (prev === 6 ? 2 : prev + 1));
-		}, 2000); // 3 seconds
-
+		}, 3000); 
 		return () => clearInterval(interval);
 	}, []);
 
