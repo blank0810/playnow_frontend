@@ -15,7 +15,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out; /* Added background transition */
+    transition: opacity 0.5s ease-in-out, background-image 1s ease-in-out; /* Added background transition */
     font-family: 'Poppins', sans-serif;
     text-align: center;
     color: white;
