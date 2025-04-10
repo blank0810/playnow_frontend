@@ -35,12 +35,16 @@ export default function ComingSoon() {
             '/images/4.svg',
             '/images/5.svg',
             '/images/6.svg',
-            '/images/coming-soon.png', // Added to ensure it’s preloaded
+            '/images/coming-soon.png',
         ];
         preloadImages(imageUrls);
 
         const interval = setInterval(() => {
-            setBgIndex((prev) => (prev === 6 ? 2 : prev + 1));
+            setBgIndex((prev) => {
+                const nextIndex = prev === 6 ? 2 : prev + 1;
+                console.log(`Switching to bgIndex: ${nextIndex}`); // Debug log
+                return nextIndex;
+            });
         }, 2000);
 
         return () => clearInterval(interval);
