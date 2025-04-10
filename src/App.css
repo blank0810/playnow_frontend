@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
 
-/* Prevent white flash */
 body {
     margin: 0;
     background-color: #000;
@@ -16,7 +15,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out; /* Added background transition */
     font-family: 'Poppins', sans-serif;
     text-align: center;
     color: white;
@@ -30,7 +29,6 @@ body {
     opacity: 1;
 }
 
-/* Loading spinner */
 .loading {
     color: white;
     font-size: 2rem;
@@ -67,7 +65,7 @@ body {
     top: 230px;
     transform: rotate(350deg);
     transition: all 0.3s ease-in-out;
-    z-index: 5; /* Ensure it’s visible above other elements */
+    z-index: 5;
 }
 
 .sports-buddy-text {
@@ -139,7 +137,6 @@ body {
     margin-top: 0px;
 }
 
-/* Media queries */
 @media (max-width: 768px), (orientation: landscape) {
     .partner-text {
         font-size: 1.5rem;
