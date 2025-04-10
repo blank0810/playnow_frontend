@@ -40,79 +40,86 @@ export default function ComingSoon() {
         preloadImages(imageUrls);
 
         const interval = setInterval(() => {
-            setBgIndex((prev) => {
-                const nextIndex = prev === 6 ? 2 : prev + 1;
-                console.log(`Switching to bgIndex: ${nextIndex}`); // Debug log
-                return nextIndex;
-            });
-        }, 2000);
+            setBgIndex((prev) => (prev === 6 ? 2 : prev + 1));
+        }, 4000); // Increased from 2000ms to 4000ms
 
         return () => clearInterval(interval);
     }, []);
 
     return (
-        <div
-            className={`coming-soon-container ${bgLoaded ? 'fade-in' : ''}`}
-            style={{
-                backgroundImage: `url(/images/${bgIndex}.svg)`,
-            }}
-        >
-            {!bgLoaded && <div className="loading">Loading...</div>}
-            <div className='logo-wrapper'>
-                <img
-                    src='/images/main-logo.png'
-                    alt='Main Logo'
-                    className='main-logo'
-                />
-                <img
-                    src='/images/coming-soon.png'
-                    alt='Coming Soon'
-                    className='coming-soon-logo'
-                />
+        <>
+            {/* Hidden preload images */}
+            <div style={{ display: 'none' }}>
+                <img src="/images/1.svg" alt="" />
+                <img src="/images/2.svg" alt="" />
+                <img src="/images/3.svg" alt="" />
+                <img src="/images/4.svg" alt="" />
+                <img src="/images/5.svg" alt="" />
+                <img src="/images/6.svg" alt="" />
             </div>
-            {bgLoaded && (
-                <>
-                    <p className='sports-buddy-text'>- Your Sports Buddy -</p>
+            <div
+                className={`coming-soon-container ${bgLoaded ? 'fade-in' : ''}`}
+                style={{
+                    backgroundImage: `url(/images/${bgIndex}.svg)`,
+                }}
+            >
+                {!bgLoaded && <div className="loading">Loading...</div>}
+                <div className='logo-wrapper'>
+                    <img
+                        src='/images/main-logo.png'
+                        alt='Main Logo'
+                        className='main-logo'
+                    />
+                    <img
+                        src='/images/coming-soon.png'
+                        alt='Coming Soon'
+                        className='coming-soon-logo'
+                    />
+                </div>
+                {bgLoaded && (
+                    <>
+                        <p className='sports-buddy-text'>- Your Sports Buddy -</p>
 
-                    <p className='partner-text'>
-                        Partner with us. Email us at
-                        <a href='mailto:hello@playnow.ae' className='email-link'>
-                            {' '}
-                            hello@playnow.ae
-                        </a>
-                    </p>
-
-                    <div className='socials-container'>
-                        <p className='socials-text'>
-                            Follow our socials and connect with us:
+                        <p className='partner-text'>
+                            Partner with us. Email us at
+                            <a href='mailto:hello@playnow.ae' className='email-link'>
+                                {' '}
+                                hello@playnow.ae
+                            </a>
                         </p>
-                    </div>
-                    <div className='socials-wrapper'>
-                        <a
-                            href='https://www.instagram.com/playnow.ae/'
-                            target='_blank'
-                            rel='noopener noreferrer'
-                        >
-                            <img
-                                src='/images/instagram.png'
-                                alt='Instagram'
-                                className='social-icon'
-                            />
-                        </a>
-                        <a
-                            href='https://www.facebook.com/profile.php?id=61567354175981'
-                            target='_blank'
-                            rel='noopener noreferrer'
-                        >
-                            <img
-                                src='/images/facebook.png'
-                                alt='Facebook'
-                                className='social-icon'
-                            />
-                        </a>
-                    </div>
-                </>
-            )}
-        </div>
+
+                        <div className='socials-container'>
+                            <p className='socials-text'>
+                                Follow our socials and connect with us:
+                            </p>
+                        </div>
+                        <div className='socials-wrapper'>
+                            <a
+                                href='https://www.instagram.com/playnow.ae/'
+                                target='_blank'
+                                rel='noopener noreferrer'
+                            >
+                                <img
+                                    src='/images/instagram.png'
+                                    alt='Instagram'
+                                    className='social-icon'
+                                />
+                            </a>
+                            <a
+                                href='https://www.facebook.com/profile.php?id=61567354175981'
+                                target='_blank'
+                                rel='noopener noreferrer'
+                            >
+                                <img
+                                    src='/images/facebook.png'
+                                    alt='Facebook'
+                                    className='social-icon'
+                                />
+                            </a>
+                        </div>
+                    </>
+                )}
+            </div>
+        </>
     );
 }
