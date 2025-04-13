@@ -14,18 +14,6 @@ const menuData: Menu[] = [
     path: "/error",
   },
   {
-    id: 2.1,
-    title: "Unlock",
-    newTab: false,
-    path: "/error",
-  },
-  {
-    id: 2.3,
-    title: "Insights",
-    newTab: false,
-    path: "/error",
-  },
-  {
     id: 3,
     title: "Partners",
     newTab: false,
@@ -67,6 +55,12 @@ const menuData: Menu[] = [
         path: "/error",
       },
     ],
+  },
+  {
+    id: 2.3,
+    title: "About us",
+    newTab: false,
+    path: "/error",
   },
 
   {

@@ -1,39 +1,87 @@
 "use client";
+
 import React from "react";
 import couponData from "./couponData";
 import SectionHeader from "../Common/SectionHeader";
 import SingleCoupon from "./SingleCoupon";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper";
+import "swiper/css";
+
+const CouponCarousel = ({ title, description, data }: any) => {
+  return (
+    <section className="pt-24 pb-12">
+      {/* Added more top padding */}
+      <div className="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
+        <SectionHeader
+          headerInfo={{
+            title,
+            subtitle: title,
+            description,
+          }}
+        />
+
+        <Swiper
+          spaceBetween={30}
+          slidesPerView={4}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          modules={[Autoplay]}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 4,
+            },
+          }}
+          className="mt-10 pb-16"
+        >
+          {data.slice(0, 6).map((coupon: any, key: number) => (
+            <SwiperSlide key={key}>
+              <SingleCoupon coupon={coupon} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        <div className="mt-6 text-right">
+          <a
+            href="#"
+            className="text-primary hover:underline"
+          >
+            See more -&gt;
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 const Coupon = () => {
   return (
     <>
-      {/* <!-- ===== Coupons Start ===== --> */}
-      <section id="coupons" className="py-20 lg:py-25 xl:py-30">
-        <div className="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
-          {/* <!-- Section Title Start --> */}
-          <SectionHeader
-            headerInfo={{
-              title: "Latest Coupons",
-              subtitle: "Coupons Listing Page",
-              description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-            convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam
-            ante in maximus.`,
-            }}
-          />
-          {/* <!-- Section Title End --> */}
+      <CouponCarousel
+        title="Featured Coupons"
+        description="Check out our best featured coupons picked just for you."
+        data={couponData}
+      />
 
-          <div className="mt-12.5 grid grid-cols-1 gap-7.5 md:grid-cols-2 lg:mt-15 lg:grid-cols-3 xl:mt-20 xl:gap-12.5">
-            {/* <!-- Coupons item Start --> */}
+      <CouponCarousel
+        title="Hottest Coupons"
+        description="Trending now – grab these hot deals before they're gone!"
+        data={couponData}
+      />
 
-            {couponData.map((Coupon, key) => (
-              <SingleCoupon coupon={Coupon} key={key} />
-            ))}
-            {/* <!-- Coupons item End --> */}
-          </div>
-        </div>
-      </section>
-
-      {/* <!-- ===== Coupons End ===== --> */}
+      <CouponCarousel
+        title="New Coupons"
+        description="Freshly dropped coupons just added to the collection."
+        data={couponData}
+      />
     </>
   );
 };

@@ -3,9 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { ShoppingCart } from "lucide-react";
 
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
+import SearchBar from "./searchBar";
 
 const Header = () => {
   const [navigationOpen, setNavigationOpen] = useState(false);
@@ -14,7 +16,6 @@ const Header = () => {
 
   const pathUrl = usePathname();
 
-  // Sticky menu
   const handleStickyMenu = () => {
     if (window.scrollY >= 80) {
       setStickyMenu(true);
@@ -25,39 +26,22 @@ const Header = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", handleStickyMenu);
-  });
+  }, []);
 
   return (
     <header
-      className={`fixed left-0 top-0 z-99999 w-full py-7 ${
+      className={`fixed left-0 top-0 z-99999 w-full py-6 ${
         stickyMenu
           ? "bg-white !py-4 shadow transition duration-100 dark:bg-black"
           : ""
       }`}
     >
-      <div className="relative mx-auto max-w-c-1390 items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
-        <div className="flex w-full items-center justify-between xl:w-1/4">
-          <a href="/">
-            <Image
-              src="/images/logo/"
-              alt="logo"
-              width={119.03}
-              height={30}
-              className="hidden w-full dark:block"
-            />
-            <Image
-              src="/images/logo/"
-              alt="logo"
-              width={119.03}
-              height={30}
-              className="w-full dark:hidden"
-            />
-          </a>
-
-          {/* <!-- Hamburger Toggle BTN --> */}
+      <div className="relative mx-auto max-w-c-1390 flex flex-wrap items-center justify-between px-4 md:px-8 2xl:px-0">
+        {/* Left: Mobile menu toggler */}
+        <div className="flex items-center gap-4 xl:hidden">
           <button
             aria-label="hamburger Toggler"
-            className="block xl:hidden"
+            className="block"
             onClick={() => setNavigationOpen(!navigationOpen)}
           >
             <span className="relative block h-5.5 w-5.5 cursor-pointer">
@@ -92,17 +76,28 @@ const Header = () => {
               </span>
             </span>
           </button>
-          {/* <!-- Hamburger Toggle BTN --> */}
         </div>
 
-        {/* Nav Menu Start   */}
+        {/* Center: Logo + Navigation */}
         <div
-          className={`invisible h-0 w-full items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full ${
+          className={`invisible h-0 w-full items-center justify-between xl:visible xl:flex xl:h-auto xl:w-auto ${
             navigationOpen &&
             "navbar !visible mt-4 h-auto max-h-[400px] rounded-md bg-white p-7.5 shadow-solid-5 dark:bg-blacksection xl:h-auto xl:p-0 xl:shadow-none xl:dark:bg-transparent"
           }`}
         >
-          <nav>
+          <nav className="flex flex-wrap items-center gap-12">
+            {/* Logo before nav */}
+            <Link href="/" className="mr-6">
+              <Image
+                src="/images/logo/logo.png"
+                alt="logo"
+                width={70}
+                height={5}
+                className="dark:hidden"
+              />
+            </Link>
+
+            {/* Navigation Links */}
             <ul className="flex flex-col gap-5 xl:flex-row xl:items-center xl:gap-10">
               {menuData.map((menuItem, key) => (
                 <li key={key} className={menuItem.submenu && "group relative"}>
@@ -110,22 +105,19 @@ const Header = () => {
                     <>
                       <button
                         onClick={() => setDropdownToggler(!dropdownToggler)}
-                        className="flex cursor-pointer items-center justify-between gap-3 hover:text-primary"
+                        className="flex items-center gap-2 text-base hover:text-primary"
                       >
                         {menuItem.title}
-                        <span>
-                          <svg
-                            className="h-3 w-3 cursor-pointer fill-waterloo group-hover:fill-primary"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 512 512"
-                          >
-                            <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
-                          </svg>
-                        </span>
+                        <svg
+                          className="h-3 w-3 fill-waterloo group-hover:fill-primary"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 512 512"
+                        >
+                          <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+                        </svg>
                       </button>
-
                       <ul
-                        className={`dropdown ${dropdownToggler ? "flex" : ""}`}
+                        className={`dropdown ${dropdownToggler ? "flex" : ""} text-base`}
                       >
                         {menuItem.submenu.map((item, key) => (
                           <li key={key} className="hover:text-primary">
@@ -136,12 +128,12 @@ const Header = () => {
                     </>
                   ) : (
                     <Link
-                      href={`${menuItem.path}`}
-                      className={
+                      href={menuItem.path}
+                      className={`text-base ${
                         pathUrl === menuItem.path
-                          ? "text-primary hover:text-primary"
+                          ? "text-primary font-medium"
                           : "hover:text-primary"
-                      }
+                      }`}
                     >
                       {menuItem.title}
                     </Link>
@@ -150,30 +142,33 @@ const Header = () => {
               ))}
             </ul>
           </nav>
+        </div>
 
-          <div className="mt-7 flex items-center gap-6 xl:mt-0">
-            <ThemeToggler />
+        {/* Right: Cart, Search, Auth Buttons, Theme Toggle */}
+        <div className="flex items-center gap-8"> {/* Adjusted the gap */}
+          <Link href="/cart" aria-label="View cart" className="text-base">
+            <ShoppingCart className="h-5 w-5 text-waterloo hover:text-primary transition duration-200" />
+          </Link>
 
-            <Link
-              href="/auth/signup"
-              className="text-regular font-medium text-waterloo hover:text-primary"
-            >
-              Sign up
-            </Link>
+          <SearchBar />
 
-            <Link
-              href="/auth/signin"
-              className="flex items-center justify-center rounded-full bg-primary px-7.5 py-2.5 text-regular text-white duration-300 ease-in-out hover:bg-primaryho"
-            >
-              Sign in
-            </Link>
-          </div>
+          <Link
+            href="/auth/signup"
+            className="text-base font-medium text-waterloo hover:text-primary"
+          >
+            Sign up
+          </Link>
+          <Link
+            href="/auth/signin"
+            className="rounded-full bg-primary px-6 py-2 text-base text-white duration-300 hover:bg-primaryho"
+          >
+            Sign in
+          </Link>
+          <ThemeToggler />
         </div>
       </div>
     </header>
   );
 };
-
-// w-full delay-300
 
 export default Header;

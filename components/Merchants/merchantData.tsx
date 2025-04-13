@@ -1,48 +1,62 @@
-import { Business, Merchant } from "@/types/merchant";
+import { Merchant } from "@/types/merchant";
 
-const MerchantData: Business[] = [
+const merchantData: Merchant[] = [
   {
-    _id: 1,
-    mainImage: "/images/merchant/",
-    title: "Enan's Business",
-    metadata:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
+    id: 0.25,
+    name: "Client",
+    href: "#",
+    image: "/images/merchant/1.png",
+    imageLight: "/images/merchant/1.png",
   },
   {
-    _id: 2,
-    mainImage: "/images/merchant/merchant-02.png",
-    title: "JanTan's Store",
-    metadata:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
+    id: 0.3,
+    name: "Client",
+    href: "#",
+    image: "/images/merchant/2.png",
+    imageLight: "/images/merchant/2.png",
   },
   {
-    _id: 2,
-    mainImage: "/images/merchant/merchant-03.png",
-    title: "Klent's discount",
-    metadata:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
+    id: 0.4,
+    name: "Client",
+    href: "#",
+    image: "/images/merchant/3.png",
+    imageLight: "/images/merchant/3.png",
   },
   {
-    _id: 1,
-    mainImage: "/images/merchant/merchant-03.png",
-    title: "HAHAHAHA",
-    metadata:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
+    id: 0.7,
+    name: "Client",
+    href: "#",
+    image: "/images/merchant/6.png",
+    imageLight: "/images/merchant/6.png",
   },
   {
-    _id: 2,
-    mainImage: "/images/merchant/merchant-04.png",
-    title: "HAHAHAHH",
-    metadata:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
+    id: 0.5,
+    name: "Client",
+    href: "#",
+    image: "/images/merchant/4.png",
+    imageLight: "/images/merchant/4.png",
   },
   {
-    _id: 2,
-    mainImage: "/images/merchant/merchant-01.png",
-    title: "HAHAHAHHA",
-    metadata:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
+    id: 0.7,
+    name: "Client",
+    href: "#",
+    image: "/images/merchant/6.png",
+    imageLight: "/images/merchant/6.png",
+  },
+  {
+    id: 0.6,
+    name: "Client",
+    href: "#",
+    image: "/images/merchant/5.png",
+    imageLight: "/images/merchant/5.png",
+  },
+  {
+    id: 0.7,
+    name: "Client",
+    href: "#",
+    image: "/images/merchant/6.png",
+    imageLight: "/images/merchant/6.png",
   },
 ];
 
-export default MerchantData;
+export default merchantData;
