@@ -22,12 +22,19 @@ const Footer = () => {
                 className="animate_top w-1/2 lg:w-1/4"
               >
                 <a href="/" className="relative">
-                  <Image
+                <Image
                     width={110}
                     height={80}
                     src="/images/logo/logo.png"
                     alt="Logo"
                     className="dark:hidden"
+                  />
+                  <Image
+                    width={110}
+                    height={80}
+                    src="/images/logo/logo2.png"
+                    alt="Logo"
+                    className="hidden dark:block"
                   />
                 </a>
 

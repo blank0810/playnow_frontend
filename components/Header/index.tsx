@@ -88,14 +88,22 @@ const Header = () => {
           <nav className="flex flex-wrap items-center gap-12">
             {/* Logo before nav */}
             <Link href="/" className="mr-6">
-              <Image
-                src="/images/logo/logo.png"
-                alt="logo"
-                width={70}
-                height={5}
-                className="dark:hidden"
-              />
+            <Image
+              src="/images/logo/logo2.png"
+              alt="logo"
+              width={70}
+              height={30}
+              className="hidden w-full dark:block"
+            />
+            <Image
+              src="/images/logo/logo.png"
+              alt="logo"
+              width={70}
+              height={30}
+              className="w-full dark:hidden"
+            />
             </Link>
+
 
             {/* Navigation Links */}
             <ul className="flex flex-col gap-5 xl:flex-row xl:items-center xl:gap-10">
