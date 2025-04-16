@@ -136,7 +136,7 @@ const Header = () => {
                     </>
                   ) : (
                     <Link
-                      href={menuItem.path}
+                      href={menuItem.path || "#"}
                       className={`text-base ${
                         pathUrl === menuItem.path
                           ? "text-primary font-medium"
