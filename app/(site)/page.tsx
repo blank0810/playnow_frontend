@@ -7,25 +7,26 @@ import FAQ from "@/components/FAQ";
 import Pricing from "@/components/Pricing";
 import Contact from "@/components/Contact";
 import Testimonial from "@/components/Testimonial";
-import Merchant from "@/components/Merchants";
+import Brands from "@/components/Merchants";
 
 export const metadata: Metadata = {
   title: "PlayNow",
-
-  // other metadata
-  description: "This is Home for discounts"
+  description: "This is Home for discounts",
+  icons: {
+    icon: "/images/logo/head-logo.png",
+  },
 };
 
 export default function Home() {
   return (
     <main>
       <Hero />
+      <Brands />
       <Coupon />
-      <Merchant />
       <FunFact />
-      <FAQ />
-      <CTA />
       <Testimonial />
+      <CTA />
+      <FAQ />
       <Pricing />
       <Contact />
     </main>

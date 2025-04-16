@@ -1,34 +1,46 @@
+"use client";
+
 import React from "react";
-import SectionHeader from "../Common/SectionHeader";
-import MerchantItem from "./MerchantItem";
-import MerchantData from "./merchantData";
+import SingleMerchant from "./SingleMerchant";
+import merchantData from "./merchantData";
+import { motion } from "framer-motion";
 
-const Merchant = async () => {
+const Merchants = () => {
+  const repeatedMerchants = [
+    ...merchantData,
+    ...merchantData,
+    ...merchantData,
+    ...merchantData,
+  ];
+
   return (
-    <section className="py-20 lg:py-25 xl:py-30">
-      <div className="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
-        {/* <!-- Section Title Start --> */}
-        <div className="animate_top mx-auto text-center">
-          <SectionHeader
-            headerInfo={{
-              title: `Merchants`,
-              subtitle: `Businesses & Merchants`,
-              description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.`,
-            }}
-          />
-        </div>
-        {/* <!-- Section Title End --> */}
-      </div>
-
-      <div className="mx-auto mt-15 max-w-c-1280 px-4 md:px-8 xl:mt-20 xl:px-0">
-        <div className="grid grid-cols-1 gap-7.5 md:grid-cols-2 lg:grid-cols-3 xl:gap-10">
-          {MerchantData.slice(0, 3).map((Merchant, key) => (
-            <MerchantItem merchant={Merchant} key={key} />
+    <section className="overflow-hidden border border-x-0 border-y-stroke bg-alabaster py-11 dark:border-y-strokedark dark:bg-black">
+      <div
+        className="relative w-full"
+        style={{
+          maskImage:
+            "linear-gradient(to right, transparent 10%, black 40%, black 60%, transparent 90%)",
+          WebkitMaskImage:
+            "linear-gradient(to right, transparent 10%, black 40%, black 60%, transparent 90%)",
+        }}
+      >
+        <motion.div
+          className="flex gap-12.5 whitespace-nowrap"
+          initial={{ x: 0 }}
+          animate={{ x: "-150%" }}
+          transition={{
+            repeat: Infinity,
+            duration: 60,
+            ease: "linear",
+          }}
+        >
+          {repeatedMerchants.map((merchant, key) => (
+            <SingleMerchant merchant={merchant} key={`${merchant.id}-${key}`} />
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
 };
 
-export default Merchant;
+export default Merchants;
