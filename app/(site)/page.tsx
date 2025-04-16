@@ -24,9 +24,9 @@ export default function Home() {
       <Brands />
       <Coupon />
       <FunFact />
-      <FAQ />
-      <CTA />
       <Testimonial />
+      <CTA />
+      <FAQ />
       <Pricing />
       <Contact />
     </main>

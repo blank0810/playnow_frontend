@@ -16,7 +16,7 @@ const Hero = () => {
           <div className="flex lg:items-center lg:gap-8 xl:gap-32.5">
             <div className=" md:w-1/2">
               <h4 className="mb-4.5 text-lg font-medium text-black dark:text-white">
-                🔥 Level up your game with unbeatbale discounts!
+                🔥 Level up your game with unbeatable discounts!
               </h4>
               <h1 className="mb-5 pr-16 text-3xl font-bold text-black dark:text-white xl:text-hero ">
                 Level up your game {"   "}
@@ -25,7 +25,7 @@ const Hero = () => {
                 </span>
               </h1>
               <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Unlock premium experiences at unbeatable prices—from everyday essentials to special treats. Playnow connects you to top merchants and curated discounts designed to elevate your lifestyle.
               </p>
 
               <div className="mt-10">
@@ -76,7 +76,7 @@ const Hero = () => {
                   height={21.66}
                   className="absolute -right-6.5 bottom-0 z-1"
                 />
-                <div className=" relative aspect-[500/590] w-full">
+                <div className=" relative aspect-[700/800] w-full">
                   <Image
                     className=" dark:hidden"
                     src="/images/hero/bg.png"

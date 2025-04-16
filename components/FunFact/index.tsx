@@ -59,9 +59,7 @@ const FunFact = () => {
               Trusted by Thousands of Merchants.
             </h2>
             <p className="mx-auto lg:w-11/12">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-              convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam
-              ante in maximus.
+            We’re more than a platform—we’re a trusted partner. Thousands of merchants choose Playnow to expand their reach and maximize their impact.
             </p>
           </motion.div>
 

@@ -5,43 +5,43 @@ const CouponData: Coupon[] = [
     id: 1,
     icon: "/images/icon/icon-03.svg",
     title: "Coupon",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+    price: 0
   },
   {
     id: 2,
     icon: "/images/icon/icon-03.svg",
     title: "Coupon",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+    price: 0
   },
   {
     id: 3,
     icon: "/images/icon/icon-03.svg",
     title: "Coupon",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+    price: 0
   },
   {
     id: 4,
     icon: "/images/icon/icon-03.svg",
     title: "Coupon",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+    price: 0
   },
   {
     id: 5,
     icon: "/images/icon/icon-03.svg",
     title: "Coupon",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+    price: 0
   },
   {
     id: 6,
     icon: "/images/icon/icon-03.svg",
     title: "Coupon",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+    price: 0
   },
 ];
 

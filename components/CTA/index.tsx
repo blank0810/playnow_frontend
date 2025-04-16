@@ -32,9 +32,7 @@ const CTA = () => {
                 Join With Us Today and earn discounts!
               </h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                convallis tortor eros. Donec vitae tortor lacus. Phasellus
-                aliquam ante in maximus.
+              Become part of a growing community that shops smart and saves more. Your next great deal is waiting.
               </p>
             </motion.div>
             <motion.div
