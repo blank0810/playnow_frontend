@@ -30,43 +30,73 @@ const Pricing = () => {
               className="dark:hidden"
             />
           </div>
-          <div className="flex flex-wrap justify-center gap-7.5 lg:flex-nowrap xl:gap-12.5">
+          <div className="flex flex-wrap justify-center gap-7 lg:flex-nowrap xl:gap-12.5">
             {/* <!-- Pricing Item --> */}
-            <div className="animate_top group relative rounded-lg border border-stroke bg-white p-7.5 shadow-solid-10 dark:border-strokedark dark:bg-blacksection dark:shadow-none md:w-[45%] lg:w-1/3 xl:p-12.5">
-              <h3 className="mb-7.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">
-                $10{" "}
-                <span className="text-regular text-waterloo dark:text-manatee">
-                  /month
+            <div className="animate_top group relative rounded-lg border border-stroke bg-white p-7 shadow-lg hover:shadow-xl transition-all duration-300 dark:border-strokedark dark:bg-blacksection dark:shadow-none md:w-[45%] lg:w-1/3 xl:p-12.5 hover:scale-105">
+              <h3 className="mb-5.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">
+                FREE{" "}
+                <span className="text-regular text-orange-400 dark:text-manatee">
+                  /lifetime
                 </span>
               </h3>
               <h4 className="mb-2.5 text-para2 font-medium text-black dark:text-white">
                 Small Pack
               </h4>
-              <p>Lorem ipsum dolor sit amet, consec adipisicing elit.</p>
+              <p className="text-base text-body-color dark:text-body-color-dark">
+                Perfect for individuals who want access to basic deals without commitment.
+              </p>
 
               <div className="mt-9 border-t border-stroke pb-12.5 pt-9 dark:border-strokedark">
                 <ul>
-                  <li className="mb-4 text-black last:mb-0 dark:text-manatee">
-                    lorem ipsum
+                  <li className="mb-4 flex items-start gap-2 text-black last:mb-0 dark:text-manatee">
+                    <svg className="mt-1 h-5 w-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8.25 8.25a1 1 0 01-1.414 0l-4.25-4.25a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                    Access to standard deals
                   </li>
-                  <li className="mb-4 text-black last:mb-0 dark:text-manatee">
-                  lorem ipsum
+                  <li className="mb-4 flex items-start gap-2 text-black last:mb-0 dark:text-manatee">
+                    <svg className="mt-1 h-5 w-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8.25 8.25a1 1 0 01-1.414 0l-4.25-4.25a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                    Save up to 30% on select offers
                   </li>
-                  <li className="mb-4 text-black opacity-40 last:mb-0 dark:text-manatee">
-                  lorem ipsum
+                  <li className="mb-4 flex items-start gap-2 text-black last:mb-0 dark:text-manatee">
+                    <svg className="mt-1 h-5 w-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8.25 8.25a1 1 0 01-1.414 0l-4.25-4.25a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                    Email notifications for new deals
                   </li>
-                  <li className="mb-4 text-black opacity-40 last:mb-0 dark:text-manatee">
-                  lorem ipsum
+                  <li className="mb-4 flex items-start gap-2 text-black last:mb-0 dark:text-manatee">
+                    <svg className="mt-1 h-5 w-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8.25 8.25a1 1 0 01-1.414 0l-4.25-4.25a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                    Standard customer support
                   </li>
                 </ul>
               </div>
 
               <button
                 aria-label="Get the Plan button"
-                className="group/btn inline-flex items-center gap-2.5 font-medium text-primary transition-all duration-300 dark:text-white dark:hover:text-primary"
+                className="group/btn inline-flex items-center gap-2.5 font-medium text-orange-500 transition-all duration-300 dark:text-white dark:hover:text-orange-500 hover:scale-105"
               >
                 <span className="duration-300 group-hover/btn:pr-2">
-                  Get the Plan
+                  Sign up free
                 </span>
                 <svg
                   width="14"
@@ -83,42 +113,53 @@ const Pricing = () => {
             </div>
 
             {/* <!-- Pricing Item --> */}
-            <div className="animate_top group relative rounded-lg border border-stroke bg-white p-7.5 shadow-solid-10 dark:border-strokedark dark:bg-blacksection dark:shadow-none md:w-[45%] lg:w-1/3 xl:p-12.5">
-
-              <h3 className="mb-7.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">
-                $59{" "}
-                <span className="text-regular text-waterloo dark:text-manatee">
+            <div className="animate_top group relative rounded-lg border border-stroke bg-white p-7 shadow-lg hover:shadow-xl transition-all duration-300 dark:border-strokedark dark:bg-blacksection dark:shadow-none md:w-[45%] lg:w-1/3 xl:p-12.5 hover:scale-105">
+              <h3 className="mb-5.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">
+                AED 49{" "}
+                <span className="text-regular text-orange-400 dark:text-manatee">
                   /month
                 </span>
               </h3>
               <h4 className="mb-2.5 text-para2 font-medium text-black dark:text-white">
-                Medium Pack
+                Premium
               </h4>
-              <p>Lorem ipsum dolor sit amet, consec adipisicing elit.</p>
+              <p className="text-base text-body-color dark:text-body-color-dark">
+                Unlock all benefits including exclusive deals, early access, and priority support.
+              </p>
 
               <div className="mt-9 border-t border-stroke pb-12.5 pt-9 dark:border-strokedark">
                 <ul>
-                  <li className="mb-4 text-black last:mb-0 dark:text-manatee">
-                  lorem ipsum
-                  </li>
-                  <li className="mb-4 text-black last:mb-0 dark:text-manatee">
-                  lorem ipsum
-                  </li>
-                  <li className="mb-4 text-black last:mb-0 dark:text-manatee">
-                  lorem ipsum
-                  </li>
-                  <li className="mb-4 text-black opacity-40 last:mb-0 dark:text-manatee">
-                  lorem ipsum
-                  </li>
+                  {[
+                    "All Free plan benefits",
+                    "Exclusive premium deals",
+                    "Save up to 50% on select offers",
+                    "Early access to limited-time offers",
+                    "No service fees",
+                    "Priority customer support"
+                  ].map((feature, index) => (
+                    <li
+                      key={index}
+                      className="mb-4 flex items-start gap-2 text-black last:mb-0 dark:text-manatee"
+                    >
+                      <svg className="mt-1 h-5 w-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                        <path
+                          fillRule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8.25 8.25a1 1 0 01-1.414 0l-4.25-4.25a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                      {feature}
+                    </li>
+                  ))}
                 </ul>
               </div>
 
               <button
                 aria-label="Get the Plan button"
-                className="group/btn inline-flex items-center gap-2.5 font-medium text-primary transition-all duration-300 dark:text-white dark:hover:text-primary"
+                className="group/btn inline-flex items-center gap-2.5 font-medium text-orange-500 transition-all duration-300 dark:text-white dark:hover:text-orange-500 hover:scale-105"
               >
                 <span className="duration-300 group-hover/btn:pr-2">
-                  Get the Plan
+                  Get Premium
                 </span>
                 <svg
                   width="14"
@@ -134,42 +175,53 @@ const Pricing = () => {
               </button>
             </div>
 
-            {/* <!-- Pricing Item --> */}
-            <div className="animate_top group relative rounded-lg border border-stroke bg-white p-7.5 shadow-solid-10 dark:border-strokedark dark:bg-blacksection dark:shadow-none md:w-[45%] lg:w-1/3 xl:p-12.5">
-              <h3 className="mb-7.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">
-                $189{" "}
-                <span className="text-regular text-waterloo dark:text-manatee">
-                  /month
+            {/* Additional pricing options can be added here */}
+            <div className="animate_top group relative rounded-lg border border-stroke bg-white p-7 shadow-lg hover:shadow-xl transition-all duration-300 dark:border-strokedark dark:bg-blacksection dark:shadow-none md:w-[45%] lg:w-1/3 xl:p-12.5 hover:scale-105">
+              <h3 className="mb-5.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">
+                AED 399{" "}
+                <span className="text-regular text-orange-400 dark:text-manatee">
+                  /year
                 </span>
               </h3>
               <h4 className="mb-2.5 text-para2 font-medium text-black dark:text-white">
-                Large Pack
+                Premium Annual
               </h4>
-              <p>Lorem ipsum dolor sit amet, consec adipisicing elit.</p>
+              <p className="text-base text-body-color dark:text-body-color-dark">
+                Unlock all benefits including exclusive deals, early access, and priority support.
+              </p>
 
               <div className="mt-9 border-t border-stroke pb-12.5 pt-9 dark:border-strokedark">
                 <ul>
-                  <li className="mb-4 text-black last:mb-0 dark:text-manatee">
-                  lorem ipsum
-                  </li>
-                  <li className="mb-4 text-black last:mb-0 dark:text-manatee">
-                  lorem ipsum
-                  </li>
-                  <li className="mb-4 text-black last:mb-0 dark:text-manatee">
-                  lorem ipsum
-                  </li>
-                  <li className="mb-4 text-black last:mb-0 dark:text-manatee">
-                  lorem ipsum
-                  </li>
+                  {[                    
+                    "All Premium monthly benefits",
+                    "Save 32% compared to monthly",
+                    "Exclusive annual member offers",
+                    "Dedicated account manager",
+                    "VIP customer support",
+                  ].map((feature, index) => (
+                    <li
+                      key={index}
+                      className="mb-4 flex items-start gap-2 text-black last:mb-0 dark:text-manatee"
+                    >
+                      <svg className="mt-1 h-5 w-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                        <path
+                          fillRule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8.25 8.25a1 1 0 01-1.414 0l-4.25-4.25a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                      {feature}
+                    </li>
+                  ))}
                 </ul>
               </div>
 
               <button
                 aria-label="Get the Plan button"
-                className="group/btn inline-flex items-center gap-2.5 font-medium text-primary transition-all duration-300 dark:text-white dark:hover:text-primary"
+                className="group/btn inline-flex items-center gap-2.5 font-medium text-orange-500 transition-all duration-300 dark:text-white dark:hover:text-orange-500 hover:scale-105"
               >
                 <span className="duration-300 group-hover/btn:pr-2">
-                  Get the Plan
+                  Get Started
                 </span>
                 <svg
                   width="14"
@@ -184,6 +236,7 @@ const Pricing = () => {
                 </svg>
               </button>
             </div>
+
           </div>
         </div>
       </section>

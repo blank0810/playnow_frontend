@@ -1,18 +1,18 @@
 import React from "react";
-import Contact from "@/components/Contact";
 import { Metadata } from "next";
+import ContactUs from "@/components/Pages/ContactUs";
 
 export const metadata: Metadata = {
-  title: "Support Page",
+  title: "Contact Us | PlayNow",
 
   // other metadata
-  description: "This is Support page"
+  description: "contact us for any inquiries or support",
 };
 
 const SupportPage = () => {
   return (
     <div className="pb-20 pt-40">
-      <Contact />
+      <ContactUs />
     </div>
   );
 };

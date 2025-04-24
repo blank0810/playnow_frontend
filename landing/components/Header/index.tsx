@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { ShoppingCart } from "lucide-react";
+import { ShoppingCart, LocateIcon, Store } from "lucide-react";
 
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
@@ -37,7 +37,7 @@ const Header = () => {
       }`}
     >
       <div className="relative mx-auto max-w-c-1390 flex flex-wrap items-center justify-between px-4 md:px-8 2xl:px-0">
-        {/* Left: Mobile menu toggler */}
+        {/* Mobile menu toggle */}
         <div className="flex items-center gap-4 xl:hidden">
           <button
             aria-label="hamburger Toggler"
@@ -47,17 +47,17 @@ const Header = () => {
             <span className="relative block h-5.5 w-5.5 cursor-pointer">
               <span className="absolute right-0 block h-full w-full">
                 <span
-                  className={`relative left-0 top-0 my-1 block h-0.5 rounded-sm bg-black delay-[0] duration-200 ease-in-out dark:bg-white ${
+                  className={`relative my-1 block h-0.5 rounded-sm bg-black delay-[0] duration-200 ease-in-out dark:bg-white ${
                     !navigationOpen ? "!w-full delay-300" : "w-0"
                   }`}
                 ></span>
                 <span
-                  className={`relative left-0 top-0 my-1 block h-0.5 rounded-sm bg-black delay-150 duration-200 ease-in-out dark:bg-white ${
+                  className={`relative my-1 block h-0.5 rounded-sm bg-black delay-150 duration-200 ease-in-out dark:bg-white ${
                     !navigationOpen ? "delay-400 !w-full" : "w-0"
                   }`}
                 ></span>
                 <span
-                  className={`relative left-0 top-0 my-1 block h-0.5 rounded-sm bg-black delay-200 duration-200 ease-in-out dark:bg-white ${
+                  className={`relative my-1 block h-0.5 rounded-sm bg-black delay-200 duration-200 ease-in-out dark:bg-white ${
                     !navigationOpen ? "!w-full delay-500" : "w-0"
                   }`}
                 ></span>
@@ -78,34 +78,31 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Center: Logo + Navigation */}
+        {/* Main Nav */}
         <div
           className={`invisible h-0 w-full items-center justify-between xl:visible xl:flex xl:h-auto xl:w-auto ${
             navigationOpen &&
             "navbar !visible mt-4 h-auto max-h-[400px] rounded-md bg-white p-7.5 shadow-solid-5 dark:bg-blacksection xl:h-auto xl:p-0 xl:shadow-none xl:dark:bg-transparent"
           }`}
         >
-          <nav className="flex flex-wrap items-center gap-12">
-            {/* Logo before nav */}
+          <nav className="flex flex-wrap items-center gap-4">
             <Link href="/" className="mr-6">
-            <Image
-              src="/images/logo/logo2.png"
-              alt="logo"
-              width={70}
-              height={30}
-              className="hidden w-full dark:block"
-            />
-            <Image
-              src="/images/logo/logo.png"
-              alt="logo"
-              width={70}
-              height={30}
-              className="w-full dark:hidden"
-            />
+              <Image
+                src="/images/logo/logo2.png"
+                alt="logo"
+                width={70}
+                height={30}
+                className="hidden w-full dark:block"
+              />
+              <Image
+                src="/images/logo/logo.png"
+                alt="logo"
+                width={70}
+                height={30}
+                className="w-full dark:hidden"
+              />
             </Link>
 
-
-            {/* Navigation Links */}
             <ul className="flex flex-col gap-5 xl:flex-row xl:items-center xl:gap-10">
               {menuData.map((menuItem, key) => (
                 <li key={key} className={menuItem.submenu && "group relative"}>
@@ -113,22 +110,20 @@ const Header = () => {
                     <>
                       <button
                         onClick={() => setDropdownToggler(!dropdownToggler)}
-                        className="flex items-center gap-2 text-base hover:text-primary"
+                        className="flex items-center gap-2 text-base hover:text-orange-500"
                       >
                         {menuItem.title}
                         <svg
-                          className="h-3 w-3 fill-waterloo group-hover:fill-primary"
+                          className="h-3 w-3 fill-waterloo group-hover:fill-orange-500"
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 512 512"
                         >
                           <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
                         </svg>
                       </button>
-                      <ul
-                        className={`dropdown ${dropdownToggler ? "flex" : ""} text-base`}
-                      >
+                      <ul className={`dropdown ${dropdownToggler ? "flex" : ""} text-base`}>
                         {menuItem.submenu.map((item, key) => (
-                          <li key={key} className="hover:text-primary">
+                          <li key={key} className="hover:text-orange-500">
                             <Link href={item.path || "#"}>{item.title}</Link>
                           </li>
                         ))}
@@ -139,8 +134,8 @@ const Header = () => {
                       href={menuItem.path || "#"}
                       className={`text-base ${
                         pathUrl === menuItem.path
-                          ? "text-primary font-medium"
-                          : "hover:text-primary"
+                          ? "text-orange-500 font-medium"
+                          : "hover:text-orange-500"
                       }`}
                     >
                       {menuItem.title}
@@ -149,31 +144,72 @@ const Header = () => {
                 </li>
               ))}
             </ul>
+
+            {/* Mobile Auth Buttons - SIDE BY SIDE */}
+            <div className="mt-6 flex flex-col gap-2 xl:hidden">
+              <div className="flex gap-2">
+                <Link
+                  href="/auth/signin"
+                  className="flex-1 rounded bg-orange-500 px-4 py-2 text-center text-sm text-white duration-300 hover:bg-orange-600"
+                >
+                  Sign in
+                </Link>
+                <Link
+                  href="/auth/signup"
+                  className="flex-1 rounded border border-gray-300 px-4 py-2 text-center text-sm text-waterloo hover:text-orange-500"
+                >
+                  Sign up
+                </Link>
+              </div>
+            </div>
           </nav>
         </div>
 
-        {/* Right: Cart, Search, Auth Buttons, Theme Toggle */}
-        <div className="flex items-center gap-8"> {/* Adjusted the gap */}
-          <Link href="/cart" aria-label="View cart" className="text-base">
-            <ShoppingCart className="h-5 w-5 text-waterloo hover:text-primary transition duration-200" />
-          </Link>
+        {/* Icons & Actions */}
+        <div className="flex w-full flex-wrap items-center justify-end gap-4 sm:gap-5 md:gap-6 xl:w-auto">
+          {/* Hamburger next to Search */}
+          <div className="flex items-center gap-4 xl:hidden">
+            <button
+              aria-label="hamburger Toggler"
+              className="block"
+              onClick={() => setNavigationOpen(!navigationOpen)}
+            >
+              {/* Hamburger Icon Code */}
+              {/* (No changes needed inside here from your original) */}
+            </button>
+          </div>
 
-          <SearchBar />
+          {/* Search Bar */}
+          <div className="flex-1 xl:flex-initial">
+            <SearchBar />
+          </div>
 
-          <Link
-            href="/auth/signup"
-            className="text-base font-medium text-waterloo hover:text-primary"
-          >
-            Sign up
-          </Link>
-          <Link
-            href="/auth/signin"
-            className="rounded-full bg-primary px-6 py-2 text-base text-white duration-300 hover:bg-primaryho"
-          >
-            Sign in
-          </Link>
-          <ThemeToggler />
-        </div>
+          {/* Icons */}
+          <div className="flex items-center gap-4 sm:gap-6 xl:gap-6">
+            <Link href="/cart" aria-label="Cart" className="flex items-center justify-center w-10 h-10 border border-gray-300 rounded-lg hover:text-orange-500 transition duration-300">
+              <ShoppingCart className="h-5 w-5 text-gray-600 hover:text-orange-500" />
+            </Link>
+            <div className="ml-1 sm:ml-2">
+              <ThemeToggler />
+            </div>
+          </div>
+
+          {/* Desktop Auth */}
+          <div className="hidden xl:flex items-center gap-4">
+            <Link
+              href="/auth/signup"
+              className="text-base font-medium text-waterloo hover:text-orange-500"
+            >
+              Sign up
+            </Link>
+            <Link
+              href="/auth/signin"
+              className="rounded-full bg-orange-500 px-6 py-2 text-base text-white hover:bg-orange-500"
+            >
+              Sign in
+            </Link>
+          </div>
+        </div> 
       </div>
     </header>
   );

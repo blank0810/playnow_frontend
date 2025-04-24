@@ -1,8 +1,11 @@
+import { StaticImageData } from "next/image";
+
 export type Testimonial = {
   id: number;
   name: string;
-  destination?: string;
-  image: any;
+  designation?: string;
+  image: StaticImageData;
   content: string;
-  designation: string;
+  rating: number;
+  date: string;
 };

@@ -55,14 +55,14 @@ const FAQ = () => {
               </span>
               <h2 className="relative mb-6 text-3xl font-bold text-black dark:text-white xl:text-hero">
                 Frequently Asked
-                <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg2 dark:before:bg-titlebgdark">
+                <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-orange-400 dark:before:bg-orange-500">
                   Questions
                 </span>
               </h2>
 
               <a
                 href="#"
-                className="group mt-7.5 inline-flex items-center gap-2.5 text-black hover:text-primary dark:text-white dark:hover:text-primary"
+                className="group mt-7.5 inline-flex items-center gap-2.5 text-black hover:text-orange-500 dark:text-white dark:hover:text-orange-500"
               >
                 <span className="duration-300 group-hover:pr-2">Know More</span>
                 <svg

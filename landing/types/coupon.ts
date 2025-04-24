@@ -2,8 +2,8 @@
 export type Coupon = {
   id: number;
   category: string;
-  icon: string;
+  image: string;
   title: string;
   description: string;
-  price: string | number; // <- add string here
+  price: number;
 };

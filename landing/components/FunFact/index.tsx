@@ -82,7 +82,7 @@ const FunFact = () => {
               viewport={{ once: true }}
               className="animate_top text-center"
             >
-              <h3 className="mb-2.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">
+              <h3 className="mb-2.5 text-3xl font-bold text-orange-500 dark:text-orange-500 xl:text-sectiontitle3">
                 50K
               </h3>
               <p className="text-lg lg:text-para2">World Wide Merchants</p>
@@ -105,7 +105,7 @@ const FunFact = () => {
               viewport={{ once: true }}
               className="animate_top text-center"
             >
-              <h3 className="mb-2.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">
+              <h3 className="mb-2.5 text-3xl font-bold text-orange-500 dark:text-orange-500 xl:text-sectiontitle3">
                 300k
               </h3>
               <p className="text-lg lg:text-para2">Coupons</p>
@@ -128,7 +128,7 @@ const FunFact = () => {
               viewport={{ once: true }}
               className="animate_top text-center"
             >
-              <h3 className="mb-2.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">
+              <h3 className="mb-2.5 text-3xl font-bold text-orange-500 dark:text-orange-500 xl:text-sectiontitle3">
                10k
               </h3>
               <p className="text-lg lg:text-para2">Active users</p>

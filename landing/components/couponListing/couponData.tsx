@@ -1,53 +1,54 @@
 import { Coupon } from "@/types/coupon";
 
+// Data for coupons
 const CouponData: Coupon[] = [
   {
     id: 1,
-    icon: "/images/icon/icon-03.svg",
+    image: "/images/coupons/1.png", 
     title: "Coupon",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
     price: 0,
-    category: 'Foods'
+    category: "Foods",
   },
   {
     id: 2,
-    icon: "/images/icon/icon-03.svg",
+    image: "/images/coupons/2.png", 
     title: "Coupon",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
     price: 0,
-    category: 'Sports'
+    category: "Sports",
   },
   {
     id: 3,
-    icon: "/images/icon/icon-03.svg",
+    image: "/images/coupons/3.png", 
     title: "Coupon",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
     price: 0,
-    category: 'Sports'
+    category: "Sports",
   },
   {
     id: 4,
-    icon: "/images/icon/icon-03.svg",
+    image: "/images/coupons/4.png", 
     title: "Coupon",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
     price: 0,
-    category: 'Entertainment'
+    category: "Entertainment",
   },
   {
     id: 5,
-    icon: "/images/icon/icon-03.svg",
+    image: "/images/coupons/5.png", 
     title: "Coupon",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
     price: 0,
-    category: 'Entertainment'
+    category: "Entertainment",
   },
   {
     id: 6,
-    icon: "/images/icon/icon-03.svg",
+    image: "/images/coupons/6.png", 
     title: "Coupon",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
     price: 0,
-    category: 'Entertainment'
+    category: "Entertainment",
   },
 ];
 

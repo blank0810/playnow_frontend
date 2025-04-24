@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 /* third-party libraries CSS */
 
 .testimonial-01 .swiper-pagination-bullet {
@@ -124,4 +125,28 @@ pre {
 
 .active-tab {
   @apply bg-stroke text-black dark:bg-blackho dark:text-white;
+}
+.swiper-pagination-bullet {
+  background-color: #f97316 !important; /* Tailwind's orange-500 */
+  opacity: 0.4 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #f97316 !important;
+  opacity: 1 !important;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate_top {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0; /* Ensures the animation starts from invisible */
 }

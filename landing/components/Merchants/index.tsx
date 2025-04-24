@@ -25,12 +25,12 @@ const Merchants = () => {
         }}
       >
         <motion.div
-          className="flex gap-12.5 whitespace-nowrap"
+          className="flex gap-5 whitespace-nowrap"
           initial={{ x: 0 }}
           animate={{ x: "-150%" }}
           transition={{
             repeat: Infinity,
-            duration: 60,
+            duration: 30,
             ease: "linear",
           }}
         >

@@ -63,7 +63,7 @@ const CTA = () => {
                 />
                 <a
                   href="/auth/signup"
-                  className="inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white hover:opacity-90 dark:bg-white dark:text-black"
+                  className="inline-flex items-center gap-2.5 rounded-full bg-orange-500 px-6 py-3 font-medium text-white hover:opacity-90 dark:bg-orange-500 dark:text-white transform transition-transform duration-200 hover:scale-105"
                 >
                   Sign up free
                   <Image
@@ -76,7 +76,7 @@ const CTA = () => {
                   <Image
                     width={20}
                     height={20}
-                    src="/images/icon/icon-arrow-light.svg"
+                    src="/images/icon/icon-arrow-dark.svg"
                     alt="Arrow"
                     className="hidden dark:block"
                   />

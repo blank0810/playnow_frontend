@@ -56,7 +56,7 @@ const Signin = () => {
               <div className="flex items-center gap-8">
                 <button
                   aria-label="sign with google"
-                  className="text-body-color dark:text-body-color-dark dark:shadow-two mb-6 flex w-full items-center justify-center rounded-sm border border-stroke bg-[#f8f8f8] px-6 py-3 text-base outline-none transition-all duration-300 hover:border-primary hover:bg-primary/5 hover:text-primary dark:border-transparent dark:bg-[#2C303B] dark:hover:border-primary dark:hover:bg-primary/5 dark:hover:text-primary dark:hover:shadow-none"
+                  className="text-body-color dark:text-body-color-dark dark:shadow-two mb-6 flex w-full items-center justify-center rounded-sm border border-stroke bg-[#f8f8f8] px-6 py-3 text-base outline-none transition-all duration-300 hover:border-orange-500 hover:bg-orange-500/5 hover:text-orange-500 dark:border-transparent dark:bg-[#2C303B] dark:hover:border-orange-500 dark:hover:bg-orange-500/5 dark:hover:text-orange-500 dark:hover:shadow-none"
                 >
                   <span className="mr-3">
                     <svg
@@ -129,14 +129,14 @@ const Signin = () => {
               <div className="flex flex-wrap items-center gap-10 md:justify-between xl:gap-15">
                 <div className="flex flex-wrap gap-4 md:gap-10">
 
-                  <a href="#" className="hover:text-primary">
+                  <a href="#" className="hover:text-orange-500">
                     Forgot Password?
                   </a>
                 </div>
 
                 <button
                   aria-label="login with email and password"
-                  className="inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white duration-300 ease-in-out hover:bg-blackho dark:bg-btndark dark:hover:bg-blackho"
+                  className="inline-flex items-center gap-2.5 rounded-full bg-orange-500 px-6 py-3 font-medium text-white ease-in-out hover:bg-orange-600 dark:bg-orange-500 dark:hover:bg-orange-700 transform transition-transform duration-200 hover:scale-105"
                 >
                   Log in
                   <svg
@@ -159,7 +159,7 @@ const Signin = () => {
                 <p>
                   Don't have an account?{" "}
                   <Link
-                    className="text-black hover:text-primary dark:text-white hover:dark:text-primary"
+                    className="text-black hover:text-orange-500 dark:text-white hover:dark:text-orange-500"
                     href="/auth/signup"
                   >
                     Sign Up

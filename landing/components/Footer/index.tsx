@@ -72,7 +72,7 @@ const Footer = () => {
                   <ul>
                     {["Home", "Coupons", "Merchants", "Pricing"].map((item) => (
                       <li key={item}>
-                        <a href="#" className="mb-3 inline-block hover:text-primary">
+                        <a href="#" className="mb-3 inline-block hover:text-orange-500">
                           {item}
                         </a>
                       </li>
@@ -96,9 +96,9 @@ const Footer = () => {
                     Support
                   </h4>
                   <ul>
-                    {["Company", "Admins", "Our Blog", "Contact Us"].map((item) => (
+                    {["Company", "Merchants", "Developers", "Contact Us"].map((item) => (
                       <li key={item}>
-                        <a href="#" className="mb-3 inline-block hover:text-primary">
+                        <a href="#" className="mb-3 inline-block hover:text-orange-500">
                           {item}
                         </a>
                       </li>
@@ -127,14 +127,14 @@ const Footer = () => {
                       <input
                         type="text"
                         placeholder="Email address"
-                        className="w-full rounded-full border border-stroke px-6 py-3 shadow-solid-11 focus:border-primary focus:outline-none dark:border-strokedark dark:bg-black dark:shadow-none dark:focus:border-primary"
+                        className="w-full rounded-full border border-stroke px-6 py-3 shadow-solid-11 focus:border-orange-500 focus:outline-none dark:border-strokedark dark:bg-black dark:shadow-none dark:focus:border-orange-500"
                       />
                       <button
                         aria-label="signup to newsletter"
                         className="absolute right-0 p-4"
                       >
                         <svg
-                          className="fill-[#757693] hover:fill-primary dark:fill-white"
+                          className="fill-[#757693] hover:fill-orange-500 dark:fill-white"
                           width="20"
                           height="20"
                           viewBox="0 0 20 20"
@@ -161,9 +161,9 @@ const Footer = () => {
               className="animate_top"
             >
               <ul className="flex items-center gap-8">
-                <li><a href="#" className="hover:text-primary">English</a></li>
-                <li><a href="#" className="hover:text-primary">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-primary">Support</a></li>
+                <li><a href="#" className="hover:text-orange-500">English</a></li>
+                <li><a href="#" className="hover:text-orange-500">Privacy Policy</a></li>
+                <li><a href="#" className="hover:text-orange-500">Support</a></li>
               </ul>
             </motion.div>
 
