@@ -56,29 +56,35 @@ const Footer = () => {
               <div className="flex w-full flex-col gap-8 md:flex-row md:justify-between md:gap-0 lg:w-2/3 xl:w-7/12">
                 {/* Quick Links */}
                 <motion.div
-                  variants={{
-                    hidden: { opacity: 0, y: -20 },
-                    visible: { opacity: 1, y: 0 },
-                  }}
-                  initial="hidden"
-                  whileInView="visible"
-                  transition={{ duration: 1, delay: 0.1 }}
-                  viewport={{ once: true }}
-                  className="animate_top"
-                >
-                  <h4 className="mb-9 text-itemtitle2 font-medium text-black dark:text-white">
-                    Quick Links
-                  </h4>
-                  <ul>
-                    {["Home", "Coupons", "Merchants", "Pricing"].map((item) => (
-                      <li key={item}>
-                        <a href="#" className="mb-3 inline-block hover:text-orange-500">
-                          {item}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
+  variants={{
+    hidden: { opacity: 0, y: -20 },
+    visible: { opacity: 1, y: 0 },
+  }}
+  initial="hidden"
+  whileInView="visible"
+  transition={{ duration: 1, delay: 0.1 }}
+  viewport={{ once: true }}
+  className="animate_top"
+>
+  <h4 className="mb-9 text-itemtitle2 font-medium text-black dark:text-white">
+    Quick Links
+  </h4>
+  <ul>
+    {[
+      { label: "Home", path: "/" },
+      { label: "Coupons", path: "/coupons" },
+      { label: "Merchants", path: "/merchant" },
+      { label: "Pricing", path: "/pricing" },
+    ].map((link) => (
+      <li key={link.label}>
+        <a href={link.path} className="mb-3 inline-block hover:text-orange-500">
+          {link.label}
+        </a>
+      </li>
+    ))}
+  </ul>
+</motion.div>
+
 
                 {/* Support */}
                 <motion.div

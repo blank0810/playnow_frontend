@@ -83,7 +83,7 @@ const Hero = () => {
                   className="absolute -right-6.5 bottom-0 z-1"
                 />
 
-                <div className="relative aspect-[700/800] w-full">
+                <div className="relative aspect-[1000/900] w-full">
                   <Image
                     className="dark:hidden"
                     src="/images/hero/bg.png"
